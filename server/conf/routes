@@ -5,6 +5,11 @@
 # Home page
 GET        /                             edu.trinity.videoquizreact.controllers.Application.index
 
+GET        /groupWork                    edu.trinity.videoquizreact.controllers.GroupWork.groupWork
+GET        /names                       edu.trinity.videoquizreact.controllers.GroupWork.listNames
+       
+
+
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)
 GET        /versionedAssets/*file        controllers.Assets.versioned(path="/public", file: Asset)

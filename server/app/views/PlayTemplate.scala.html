@@ -1,0 +1,11 @@
+@(names: Seq[String])
+
+
+@main("names") {
+<h1>List of names</h1>
+  <ul>
+    @for(name <- names) {
+    <li>@name</li>
+  }
+</ul>
+}
