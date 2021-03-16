@@ -4,9 +4,11 @@
 @main("table") {
 <h1>Display a Table</h1>
   <ul>
-    @for(row <- col) {
+   @* @for(row <- col) {
       @for(data <- row)
         @data
-  }
+      }
+    *@
+  
 </ul>
-}
+} 

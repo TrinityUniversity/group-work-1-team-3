@@ -11,4 +11,6 @@ class Application @Inject()(cc: ControllerComponents) extends AbstractController
   def index = Action {
     Ok(views.html.index(SharedMessages.itWorks))
   }
+
+
 }

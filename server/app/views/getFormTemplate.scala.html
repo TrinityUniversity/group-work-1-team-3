@@ -1,0 +1,16 @@
+@()
+
+@main("Login") {
+  <h1>Login</h1>
+
+  <form method ="get" action="DisplayColors">
+    username: <input type="text" name="username"></input>
+    color: <input type="text" name="color"></input>
+    <input type="submit"></input>
+  </form>
+
+  <form method ="POST" action="validatePost">
+    username: <input type="text" name="username"></input>
+    <input type="submit"></input>
+  </form>
+}

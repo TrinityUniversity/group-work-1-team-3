@@ -3,12 +3,17 @@
 # ~~~~
 
 # Home page
-GET        /                             edu.trinity.videoquizreact.controllers.Application.index
+GET        /                            edu.trinity.videoquizreact.controllers.Application.index
 
-GET        /groupWork                    edu.trinity.videoquizreact.controllers.GroupWork.groupWork
+GET        /groupWork                   edu.trinity.videoquizreact.controllers.GroupWork.groupWork
 GET        /names                       edu.trinity.videoquizreact.controllers.GroupWork.listNames
-       
 
+GET       /colorTemplate                    edu.trinity.videoquizreact.controllers.GroupWork.colorTemplate
+GET       /validateColor                edu.trinity.videoquizreact.controllers.GroupWork.validateColor(username,color)
+
+GET       /DisplayColors                edu.trinity.videoquizreact.controllers.GroupWork.DisplayColors(username,color)
+
+POST      /validatePost                 edu.trinity.videoquizreact.controllers.GroupWork.
 
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)
