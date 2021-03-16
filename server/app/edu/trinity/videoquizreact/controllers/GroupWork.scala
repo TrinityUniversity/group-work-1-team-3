@@ -26,11 +26,17 @@ class GroupWork @Inject()(cc: ControllerComponents) extends AbstractController(c
   }
 
   def validatePost() = Action { request =>
-    val postVals = request.body.asFormUrlencoded 
+    val postVals = request.body.asFormUrlEncoded 
     postVals.map { args =>
-      val username = args("username")
-    }
+      val username = args("username").head
+      Ok(username.toString)
+      //Redirect(routes.GroupWork.userDisplay(username)).withSession("username" -> username)
+    }.getOrElse(Redirect(routes.GroupWork.colorTemplate))
   }
+
+  def userDisplay(username: String) = Action {
+      Ok(views.html.PostTemplate(username))
+    }
 
   def DisplayColors(name: String, color: String) = Action {
     Ok(views.html.DisplayColors(name, color))

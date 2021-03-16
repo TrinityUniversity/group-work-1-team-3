@@ -12,8 +12,8 @@ GET       /colorTemplate                    edu.trinity.videoquizreact.controlle
 GET       /validateColor                edu.trinity.videoquizreact.controllers.GroupWork.validateColor(username,color)
 
 GET       /DisplayColors                edu.trinity.videoquizreact.controllers.GroupWork.DisplayColors(username,color)
-
-POST      /validatePost                 edu.trinity.videoquizreact.controllers.GroupWork.
++nocsrf
+POST      /validatePost                 edu.trinity.videoquizreact.controllers.GroupWork.validatePost()
 
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)
