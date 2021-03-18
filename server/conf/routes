@@ -12,6 +12,7 @@ GET       /colorTemplate                    edu.trinity.videoquizreact.controlle
 GET       /validateColor                edu.trinity.videoquizreact.controllers.GroupWork.validateColor(username,color)
 
 GET       /DisplayColors                edu.trinity.videoquizreact.controllers.GroupWork.DisplayColors(username,color)
+GET       /userDisplay                edu.trinity.videoquizreact.controllers.GroupWork.userDisplay(username)
 +nocsrf
 POST      /validatePost                 edu.trinity.videoquizreact.controllers.GroupWork.validatePost()
 

@@ -29,8 +29,8 @@ class GroupWork @Inject()(cc: ControllerComponents) extends AbstractController(c
     val postVals = request.body.asFormUrlEncoded 
     postVals.map { args =>
       val username = args("username").head
-      Ok(username.toString)
-      //Redirect(routes.GroupWork.userDisplay(username)).withSession("username" -> username)
+      //Ok(username.toString)
+      Redirect(routes.GroupWork.userDisplay(username)).withSession("username" -> username)
     }.getOrElse(Redirect(routes.GroupWork.colorTemplate))
   }
 
